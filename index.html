@@ -1,12 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="shortcut icon" href="images/shortcut-icon.PNG" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"/>
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <title>Mairala | Home</title>
+  </head>
+  <body>
+    <!--header-->
+    <header class="header js-header">
+      <div class="container">
+        <div class="row">
+          <!--logo-->
+          <h1 class="header__logo"><a href="#">Mairala</a></h1>
+          <div class="header__collapse">
+            <button class="header__button js-button-collapse" type="button"><i class="fas fa-bars"></i></button>
+          </div>
+          <!--navigation-->
+          <nav class="header__nav js-header-nav">
+            <ul class="nav">
+              <li class="nav__item"><a class="nav__link nav__link--active" href="#">Home</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#about">About</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#portfolios">Portfolios</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#team">Team</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#blog">Blog</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--carousel-advertisement-->
+    <section class="carousel-ads">
+      <!--carousel-main-->
+      <div class="carousel-ads__main js-carousel-ads">
+        <div class="carousel-ads__item"><img class="carousel-ads__img" src="images/bg-carousel-wood.JPG" alt="Carousel Image">
+          <div class="container">
+            <div class="row">
+              <div class="carousel-ads__content">
+                <p class="carousel-ads__description">Grab your copy of</p>
+                <h2 class="carousel-ads__title">The <span class="carousel-ads__highlight">premium</span> quality psd template for <span class="carousel-ads__highlight">free</span></h2>
+                <div class="carousel-ads__download"><a class="carousel-ads__link" href="#">Download <i class="fas fa-download"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-ads__item"><img class="carousel-ads__img" src="images/bg-carousel-bike.JPG" alt="Carousel Image">
+          <div class="container">
+            <div class="row">
+              <div class="carousel-ads__content">
+                <p class="carousel-ads__description">Grab your copy of</p>
+                <h2 class="carousel-ads__title">The <span class="carousel-ads__highlight">premium</span> quality psd template for <span class="carousel-ads__highlight">free</span></h2>
+                <div class="carousel-ads__download"><a class="carousel-ads__link" href="#">Download <i class="fas fa-download"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-ads__item"><img class="carousel-ads__img" src="images/bg-carousel-accessories.JPG" alt="Carousel Image">
+          <div class="container">
+            <div class="row">
+              <div class="carousel-ads__content">
+                <p class="carousel-ads__description">Grab your copy of</p>
+                <h2 class="carousel-ads__title">The <span class="carousel-ads__highlight">premium</span> quality psd template for <span class="carousel-ads__highlight">free</span></h2>
+                <div class="carousel-ads__download"><a class="carousel-ads__link" href="#">Download <i class="fas fa-download"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--carousel-control-->
+      <div class="carousel-ads__control">
+        <button class="control-prev js-btn-prev" type="button"><i class="fas fa-chevron-left"></i></button>
+        <button class="control-next js-btn-next" type="button"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+    <!--about-us-->
+    <section class="about-us" id="about">
+      <h2 class="about-us__title">Know about us</h2>
+      <p class="about-us__description">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim</p>
+      <!--introduce-->
+      <div class="introduce">
+        <div class="container">
+          <div class="row">
+            <div class="introduce__content">
+              <h3 class="introduce__title">We are the best</h3>
+              <p class="introduce__description">Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</p>
+              <p class="introduce__description">Volutpat wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum</p>
+              <div class="introduce__read-more"><a class="introduce__link" href="#">Read more <i class="fas fa-long-arrow-alt-right"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--our-services-->
+      <div class="our-services">
+        <div class="container">
+          <h3 class="our-services__title">Services we provide</h3>
+          <p class="our-services__description">Volutpat wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent</p>
+          <div class="row">
+            <div class="service">
+              <div class="service__icon"><i class="fas fa-users"></i></div>
+              <h4 class="service__title"><a class="service__link" href="#">consultancy</a></h4>
+              <p class="service__description">Claritas est etiam processus dynaicus qui sequitur mutationem consuetudium lectorum. Mirum est notare quam</p>
+            </div>
+            <div class="service">
+              <div class="service__icon"><i class="fas fa-bullhorn"></i></div>
+              <h4 class="service__title"><a class="service__link" href="#">marketing</a></h4>
+              <p class="service__description">Claritas est etiam processus dynaicus qui sequitur mutationem consuetudium lectorum. Mirum est notare quam</p>
+            </div>
+            <div class="service">
+              <div class="service__icon"><i class="fas fa-flask"></i></div>
+              <h4 class="service__title"><a class="service__link" href="#">research</a></h4>
+              <p class="service__description">Claritas est etiam processus dynaicus qui sequitur mutationem consuetudium lectorum. Mirum est notare quam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--our-skills-->
+      <div class="our-skills js-our-skills">
+        <h3 class="our-skills__title">Our skills</h3>
+        <div class="container">
+          <div class="row">
+            <div class="skill">
+              <div class="skill__circle">
+                <div class="skill__bar js-skill-bar" data-skill="85"></div>
+                <div class="skill__point">85%</div>
+              </div>
+              <div class="skill__name">marketing</div>
+            </div>
+            <div class="skill">
+              <div class="skill__circle">
+                <div class="skill__bar js-skill-bar" data-skill="75"></div>
+                <div class="skill__point">75%</div>
+              </div>
+              <div class="skill__name">research</div>
+            </div>
+            <div class="skill">
+              <div class="skill__circle">
+                <div class="skill__bar js-skill-bar" data-skill="50"></div>
+                <div class="skill__point">50%</div>
+              </div>
+              <div class="skill__name">management</div>
+            </div>
+            <div class="skill">
+              <div class="skill__circle">
+                <div class="skill__bar js-skill-bar" data-skill="25"></div>
+                <div class="skill__point">25%</div>
+              </div>
+              <div class="skill__name">consultancy</div>
+            </div>
+            <div class="skill">
+              <div class="skill__circle">
+                <div class="skill__bar js-skill-bar" data-skill="100"></div>
+                <div class="skill__point">100%</div>
+              </div>
+              <div class="skill__name">promotion</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--portfolios-->
+    <section class="portfolios" id="portfolios">
+      <h2 class="portfolios__title">Some recent projects</h2>
+      <p class="portfolios__description">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim</p>
+      <div class="portfolios__list">
+        <div class="project"><img class="project__img" src="images/pj-clip.JPG" alt="paperclips"/>
+          <div class="project__content">
+            <div class="project__detail">
+              <h3 class="project__title"><a href="#">paperclips</a></h3>
+              <p class="project__description">branding</p>
+            </div>
+          </div>
+        </div>
+        <div class="project"><img class="project__img" src="images/pj-pencil.JPG" alt="crayons"/>
+          <div class="project__content">
+            <div class="project__detail">
+              <h3 class="project__title"><a href="#">crayons</a></h3>
+              <p class="project__description">branding</p>
+            </div>
+          </div>
+        </div>
+        <div class="project"><img class="project__img" src="images/pj-umbrella.JPG" alt="umbrella"/>
+          <div class="project__content">
+            <div class="project__detail">
+              <h3 class="project__title"><a href="#">umbrella</a></h3>
+              <p class="project__description">branding</p>
+            </div>
+          </div>
+        </div>
+        <div class="project"><img class="project__img" src="images/pj-surface-hydrant.JPG" alt="surface hydrant"/>
+          <div class="project__content">
+            <div class="project__detail">
+              <h3 class="project__title"><a href="#">surface hydrant</a></h3>
+              <p class="project__description">branding</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="latest-project">
+        <h3 class="latest-project__title">Latest from twitter</h3>
+        <p class="latest-project__description">Trying out velositey - a simple website building extension for Photoshop</p>
+        <div class="latest-project__"><a class="latest-project__link" href="#">buff.ly/NC8gog</a></div>
+      </div>
+      <div class="portfolios__list">
+        <div class="project"><img class="project__img" src="images/pj-clip.JPG" alt="paperclips"/>
+          <div class="project__content">
+            <div class="project__detail">
+              <h3 class="project__title"><a href="#">paperclips</a></h3>
+              <p class="project__description">branding</p>
+            </div>
+          </div>
+        </div>
+        <div class="project"><img class="project__img" src="images/pj-pencil.JPG" alt="crayons"/>
+          <div class="project__content">
+            <div class="project__detail">
+              <h3 class="project__title"><a href="#">crayons</a></h3>
+              <p class="project__description">branding</p>
+            </div>
+          </div>
+        </div>
+        <div class="project"><img class="project__img" src="images/pj-umbrella.JPG" alt="umbrella"/>
+          <div class="project__content">
+            <div class="project__detail">
+              <h3 class="project__title"><a href="#">umbrella</a></h3>
+              <p class="project__description">branding</p>
+            </div>
+          </div>
+        </div>
+        <div class="project"><img class="project__img" src="images/pj-surface-hydrant.JPG" alt="surface hydrant"/>
+          <div class="project__content">
+            <div class="project__detail">
+              <h3 class="project__title"><a href="#">surface hydrant</a></h3>
+              <p class="project__description">branding</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolios__see-all"><a class="portfolios__link" href="#">See all <i class="fas fa-long-arrow-alt-right"></i></a></div>
+    </section>
+    <!--our-members-->
+    <section class="our-members" id="team">
+      <h2 class="our-members__title">Our team members</h2>
+      <p class="our-members__description">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim</p>
+      <div class="container">
+        <div class="row">
+          <!--member-->
+          <div class="member">
+            <div class="member__header"><img class="member__avatar" src="images/member.JPG" alt="Mitchell Anderson">
+              <div class="member__social"><a class="member__link-social" href="#t"><i class="fab fa-twitter"></i></a><a class="member__link-social" href="#fb"><i class="fab fa-facebook-f"></i></a><a class="member__link-social" href="#in"><i class="fab fa-linkedin-in"></i></a></div>
+            </div>
+            <div class="member__infor">
+              <div class="member__name"><a class="member__link" href="#">Mitchell Anderson</a></div>
+              <p class="member__position">Creative Director</p>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member__header"><img class="member__avatar" src="images/member.JPG" alt="Mitchell Anderson">
+              <div class="member__social"><a class="member__link-social" href="#t"><i class="fab fa-twitter"></i></a><a class="member__link-social" href="#fb"><i class="fab fa-facebook-f"></i></a><a class="member__link-social" href="#in"><i class="fab fa-linkedin-in"></i></a></div>
+            </div>
+            <div class="member__infor">
+              <div class="member__name"><a class="member__link" href="#">Mitchell Anderson</a></div>
+              <p class="member__position">Creative Director</p>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member__header"><img class="member__avatar" src="images/member.JPG" alt="Mitchell Anderson">
+              <div class="member__social"><a class="member__link-social" href="#t"><i class="fab fa-twitter"></i></a><a class="member__link-social" href="#fb"><i class="fab fa-facebook-f"></i></a><a class="member__link-social" href="#in"><i class="fab fa-linkedin-in"></i></a></div>
+            </div>
+            <div class="member__infor">
+              <div class="member__name"><a class="member__link" href="#">Mitchell Anderson</a></div>
+              <p class="member__position">Creative Director</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--client-review-->
+      <div class="client-review">
+        <div class="js-carousel-review">
+          <div class="client-review__content">
+            <h3 class="client-review__title">What Our Clients are saying</h3>
+            <p class="client-review__description">&quot;It was a pleasure to work with Imran. He is very dedicated and professional. He worked very hard to satisfy our requirements and the communication was great.&quot;</p>
+            <div class="client-review__author">
+              <p class="client-review__author-name">John Doe</p>
+              <div class="client-review__author-website"><a class="client-review__link" href="#">www.yourwebsite.zt</a></div>
+            </div>
+          </div>
+          <div class="client-review__content">
+            <h3 class="client-review__title">What Our Clients are saying</h3>
+            <p class="client-review__description">&quot;It was a pleasure to work with Imran. He is very dedicated and professional. He worked very hard to satisfy our requirements and the communication was great.&quot;</p>
+            <div class="client-review__author">
+              <p class="client-review__author-name">John Doe</p>
+              <div class="client-review__author-website"><a class="client-review__link" href="#">www.yourwebsite.zt</a></div>
+            </div>
+          </div>
+          <div class="client-review__content">
+            <h3 class="client-review__title">What Our Clients are saying</h3>
+            <p class="client-review__description">&quot;It was a pleasure to work with Imran. He is very dedicated and professional. He worked very hard to satisfy our requirements and the communication was great.&quot;</p>
+            <div class="client-review__author">
+              <p class="client-review__author-name">John Doe</p>
+              <div class="client-review__author-website"><a class="client-review__link" href="#">www.yourwebsite.zt</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="client-review__control js-review-control"></div>
+      </div>
+    </section>
+    <!--our-blog-->
+    <section class="our-blog" id="blog">
+      <h2 class="our-blog__title">Our blog</h2>
+      <p class="our-blog__description">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim</p>
+      <div class="our-blog__timeline">
+        <div class="container">
+          <article class="row post">
+            <div class="post__thumbnail post__thumbnail--left" id="carousel-first">
+              <div class="js-carousel-thumbnail">
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+              </div>
+              <div class="post__arrow-control">
+                <button class="post__control-prev js-post-prev" type="button"><i class="fas fa-chevron-left"></i></button>
+                <button class="post__control-next js-post-next" type="button"><i class="fas fa-chevron-right"></i></button>
+              </div>
+              <div class="post__dot-control js-dot-control"></div>
+            </div>
+            <div class="post__content">
+              <p class="post__date">10 April 2014</p>
+              <h3 class="post__title"><a class="post__link" href="#">Typi non habent claritatem insitam</a></h3>
+              <p class="post__detail js-post-detail">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui dignissim dignissim dignissim</p>
+            </div>
+          </article>
+          <article class="row post post--reverse">
+            <div class="post__thumbnail post__thumbnail--right" id="carousel-second">
+              <div class="js-carousel-thumbnail">
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+              </div>
+              <div class="post__arrow-control">
+                <button class="post__control-prev js-post-prev" type="button"><i class="fas fa-chevron-left"></i></button>
+                <button class="post__control-next js-post-next" type="button"><i class="fas fa-chevron-right"></i></button>
+              </div>
+              <div class="post__dot-control js-dot-control"></div>
+            </div>
+            <div class="post__content">
+              <p class="post__date">20 March 2014</p>
+              <h3 class="post__title"><a class="post__link" href="#">Typi non habent claritatem insitam</a></h3>
+              <p class="post__detail js-post-detail">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui [...]</p>
+            </div>
+          </article>
+          <article class="row post">
+            <div class="post__thumbnail post__thumbnail--left" id="carousel-third">
+              <div class="js-carousel-thumbnail">
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+                <div class="post__wrapper-img"><img class="post__img" src="images/post-thumbnail.JPG" alt="Blog Thumbnail"/></div>
+              </div>
+              <div class="post__arrow-control">
+                <button class="post__control-prev js-post-prev" type="button"><i class="fas fa-chevron-left"></i></button>
+                <button class="post__control-next js-post-next" type="button"><i class="fas fa-chevron-right"></i></button>
+              </div>
+              <div class="post__dot-control js-dot-control"></div>
+            </div>
+            <div class="post__content">
+              <p class="post__date">10 April 2014</p>
+              <h3 class="post__title"><a class="post__link" href="#">Typi non habent claritatem insitam</a></h3>
+              <p class="post__detail js-post-detail">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui dignissim dignissim dignissim</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="our-blog__all-post"><a class="our-blog__link" href="#">All post</a></div>
+    </section>
+    <!--contact-us-->
+    <section class="contact-us" id="contact">
+      <h2 class="contact-us__title">Contact</h2>
+      <div class="container">
+        <div class="row">
+          <form class="form-contact" action="#" method="POST">
+            <div class="form-contact__group">
+              <input class="form-contact__input js-input" type="text" name="name" required autocomplete="off"><span class="form-contact__hint" data-holder="Name*"></span>
+            </div>
+            <div class="form-contact__group">
+              <input class="form-contact__input js-input" type="email" name="email" required autocomplete="off"><span class="form-contact__hint" data-holder="Email*"></span>
+            </div>
+            <div class="form-contact__group">
+              <textarea class="form-contact__textarea js-input" name="message" rows="5"></textarea><span class="form-contact__hint" data-holder="Message..."></span>
+            </div>
+            <div class="form-contact__submit">
+              <button class="form-contact__button" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+      <div class="container footer__main">
+        <div class="row">
+          <!--epilogue-->
+          <div class="footer__item epilogue">
+            <p class="epilogue__logo"><a class="epilogue__link" href="#">Mairala</a></p>
+            <p class="epilogue__description">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+            <p class="epilogue__description">eugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta</p>
+          </div>
+          <!--blog-posts-->
+          <div class="footer__item blog-posts">
+            <h3 class="blog-posts__title">Recent posts</h3>
+            <div class="blog-posts__item">
+              <p class="blog-posts__date">March 30, 2014</p><a class="blog-posts__link" href="#">Duis autem vel eum iriure dolor</a>
+            </div>
+            <div class="blog-posts__item">
+              <p class="blog-posts__date">March 30, 2014</p><a class="blog-posts__link" href="#">Duis autem vel eum iriure dolor</a>
+            </div>
+            <div class="blog-posts__item">
+              <p class="blog-posts__date">March 30, 2014</p><a class="blog-posts__link" href="#">Duis autem vel eum iriure dolor</a>
+            </div>
+          </div>
+          <!--twitter-feeds-->
+          <div class="footer__item twitter-feeds">
+            <h3 class="twitter-feeds__title">Twitter Feeds</h3>
+            <div class="twitter-feeds__item">
+              <p class="twitter-feeds__time">about 2 days ago <a class="twitter-feeds__author" href="#">@kristianplatt</a></p><a class="twitter-feeds__link" href="#">Good work buddy</a>
+            </div>
+            <div class="twitter-feeds__item">
+              <p class="twitter-feeds__time">about 2 days ago <a class="twitter-feeds__author" href="#">@fasteven</a></p><a class="twitter-feeds__link" href="#">Good work buddy</a>
+            </div>
+            <div class="twitter-feeds__item">
+              <p class="twitter-feeds__time">about 2 days ago <a class="twitter-feeds__author" href="#">@streamer</a></p><a class="twitter-feeds__link" href="#">Good work buddy</a>
+            </div>
+          </div>
+          <!--our-address-->
+          <div class="footer__item our-address">
+            <h3 class="our-address__title">Our address</h3>
+            <p class="our-address__description">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus,luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta</p>
+            <div class="our-address__detail">
+              <p class="our-address__item"><i class="fas fa-map-marker-alt"></i> Moonshine St. 14/05 Light, Jupiter</p>
+              <p class="our-address__item"><i class="fas fa-phone-alt"></i> +00 (123) 456 78 90</p>
+              <p class="our-address__item"><i class="fas fa-envelope"></i> <a class="our-address__mail" href="mailto:first.last@email.com">first.last@email.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__end">
+        <p class="copyright">&copy; 2014 Imran Khan All Rights Reserved</p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>

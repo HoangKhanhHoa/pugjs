@@ -1,0 +1,41 @@
+mixin post({side, slideId})
+  if side == 'left'
+    article.row(class='post')
+      .post__thumbnail(id= slideId class='post__thumbnail--left')
+        .js-carousel-thumbnail
+          -
+            var imgs = ['post-thumbnail.JPG', 'post-thumbnail.JPG', 'post-thumbnail.JPG']
+          each val in imgs
+            .post__wrapper-img
+              img.post__img(src='images/' + val alt='Blog Thumbnail')
+        .post__arrow-control
+          button.post__control-prev(type='button' class='js-post-prev')
+            i(class='fas fa-chevron-left')
+          button.post__control-next(type='button' class='js-post-next')
+            i(class='fas fa-chevron-right')
+        .post__dot-control(class='js-dot-control')
+      .post__content
+        p.post__date 10 April 2014
+        h3.post__title
+          a.post__link(href='#') Typi non habent claritatem insitam
+        p.post__detail(class='js-post-detail') Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui dignissim dignissim dignissim
+  else
+    article.row(class='post post--reverse')
+      .post__thumbnail(id= slideId class='post__thumbnail--right')
+        .js-carousel-thumbnail
+          -
+            var imgs = ['post-thumbnail.JPG', 'post-thumbnail.JPG', 'post-thumbnail.JPG']
+          each val in imgs
+            .post__wrapper-img
+              img.post__img(src='images/' + val alt='Blog Thumbnail')
+        .post__arrow-control
+          button.post__control-prev(type='button' class='js-post-prev')
+            i(class='fas fa-chevron-left')
+          button.post__control-next(type='button' class='js-post-next')
+            i(class='fas fa-chevron-right')
+        .post__dot-control(class='js-dot-control')
+      .post__content
+        p.post__date 20 March 2014
+        h3.post__title
+          a.post__link(href='#') Typi non habent claritatem insitam
+        p.post__detail(class='js-post-detail') Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui [...]
