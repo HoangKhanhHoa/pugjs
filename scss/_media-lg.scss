@@ -1,0 +1,64 @@
+@media screen and (max-width: $breakpoint-lg) {
+
+  //carousel advertisement
+
+  .carousel-ads {
+    &__title {
+      font-size: 60px;
+      width: 85%;
+    }
+  }
+
+  //about-us introduce
+
+  .introduce {
+    &__content {
+      padding: 60px 0;
+    }
+  }
+
+  //about-us our-skills
+
+  .our-skills {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    background-size: cover;
+  }
+
+  //portfolios
+
+  .portfolios,
+  .our-blog {
+    padding: 60px 0;
+  }
+
+  .latest-project {
+    padding: 60px 0;
+  }
+
+  //our-members
+
+  .our-members {
+    padding-top: 60px;
+  }
+
+  .member {
+    &__avatar {
+      width: 100%;
+    }
+  }
+
+  // our-blog
+
+  .post {
+    &__img {
+      width: 100%;
+    }
+  }
+
+  // contact-us
+
+  .contact-us {
+    padding: 60px 0;
+  }
+}

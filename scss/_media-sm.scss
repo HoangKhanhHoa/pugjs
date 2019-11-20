@@ -1,0 +1,151 @@
+@media screen and (max-width: $breakpoint-sm) {
+  // header
+
+  .header {
+    .row {
+      flex-wrap: wrap;
+    }
+
+    &__collapse {
+      display: block;
+      margin: auto 0 auto auto;
+    }
+
+    &__nav {
+      display: none;
+      flex-basis: 100%;
+    }
+
+    .nav {
+      &__item {
+        display: block;
+        padding: 20px;
+      }
+    }
+  }
+
+  // carousel advertisment
+
+  .carousel-ads {
+    &__title {
+      font-size: 46px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+
+    &__link {
+      font-size: 14px;
+      padding: 20px 40px;
+    }
+  }
+
+  // about-us
+
+  .our-services {
+    &__description {
+      box-sizing: border-box;
+      margin-bottom: 60px;
+      padding: 0 15px;
+      text-align: justify;
+      width: 100%;
+    }
+
+    .row {
+      flex-wrap: wrap;
+    }
+  }
+
+  .service {
+    flex-basis: 100%;
+    padding: 10px 0;
+  }
+
+  //portfolios
+
+  .latest-project {
+    &__description {
+      padding: 0 30px;
+    }
+  }
+
+  //our-blog
+
+  .our-blog {
+    &__timeline {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  .post {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    &__thumbnail {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 24px;
+      margin-left: 0;
+      padding: 0;
+
+      &:after {
+        content: none;
+      }
+    }
+
+    &__arrow-control {
+      display: block;
+    }
+
+    &__control-prev,
+    &__control-next {
+      font-size: 42px;
+    }
+
+    &__content {
+      flex-basis: 100%;
+      padding: 0;
+    }
+
+    &__title,
+    &__date {
+      text-align: left;
+    }
+
+    &__detail {
+      text-align: justify;
+    }
+
+    &--reverse &__thumbnail {
+      margin-right: 0;
+    }
+  }
+
+  //contact-us
+
+  .form-contact {
+    width: 100%;
+
+    &__submit {
+      padding-bottom: 0;
+    }
+  }
+
+  //footer
+
+  .blog-posts,
+  .twitter-feeds {
+    flex-basis: 50%;
+  }
+
+  .twitter-feeds {
+    padding-right: 0;
+  }
+
+  .our-address {
+    flex-basis: 100%;
+  }
+}

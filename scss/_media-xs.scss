@@ -1,0 +1,140 @@
+@media screen and (max-width: $breakpoint-xs) {
+  //header
+
+  .header {
+    &__logo {
+      font-size: 40px;
+    }
+
+    .nav {
+      &__item {
+        padding: 15px;
+      }
+    }
+
+    &__button {
+      font-size: 16px;
+    }
+  }
+
+  //carousel advertisement
+
+  .carousel-ads {
+    padding-top: 85px;
+
+    &__title {
+      font-size: 40px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+  }
+
+  //about-us
+
+  .about-us {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      box-sizing: border-box;
+      padding: 0 30px;
+      width: 100%;
+    }
+  }
+
+  .introduce {
+    &__content {
+      flex-basis: 100%;
+    }
+
+    &__description {
+      text-align: justify;
+    }
+  }
+
+  //portfolios
+
+  .portfolios {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      box-sizing: border-box;
+      padding: 0 30px;
+      width: 100%;
+    }
+  }
+
+  .project {
+    &__title {
+      font-size: 14px;
+
+      &:after {
+        margin: 10px auto;
+      }
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+  }
+
+  //our-members
+
+  .our-members {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      box-sizing: border-box;
+      padding: 0 30px;
+      width: 100%;
+    }
+
+    .row {
+      flex-wrap: wrap;
+    }
+  }
+
+  .member {
+    flex-basis: 100%;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  //our-blog
+
+  .our-blog {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      box-sizing: border-box;
+      margin-bottom: 60px;
+      padding: 0 30px;
+      width: 100%;
+    }
+  }
+
+  .post {
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  //contact-us
+
+  .form-contact {
+    flex-wrap: wrap;
+
+    &__group {
+      flex-basis: 100%;
+    }
+  }
+}

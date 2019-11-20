@@ -1,0 +1,15 @@
+mixin portfolios-list
+  .portfolios__list
+      -
+        var projects = {'paperclips': {'img': 'pj-clip.JPG', 'tag': 'branding'},
+                        'crayons': {'img': 'pj-pencil.JPG', 'tag': 'branding'},
+                        'umbrella': {'img': 'pj-umbrella.JPG', 'tag': 'branding'},
+                        'surface hydrant': {'img': 'pj-surface-hydrant.JPG', 'tag': 'branding'}}
+      each val, index in projects
+        .project
+          img.project__img(src='images/' + val.img alt= index)
+          .project__content
+            .project__detail
+              h3.project__title
+                a(href='#')= index
+              p.project__description= val.tag

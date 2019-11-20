@@ -1,0 +1,199 @@
+@media screen and (max-width: $breakpoint-md) {
+  // header
+
+  .header {
+    .nav {
+      &__item {
+        padding: 0 15px;
+      }
+    }
+  }
+
+  //carousel advertisment
+
+  .carousel-ads {
+    &__title {
+      font-size: 54px;
+      width: 100%;
+    }
+
+    &__description {
+      font-size: 22px;
+    }
+
+    &__link {
+      padding: 20px 50px;
+    }
+  }
+
+  .control-prev,
+  .control-next {
+    font-size: 32px;
+  }
+
+  // about-us
+
+  .about-us {
+    padding-top: 60px;
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__description {
+      font-size: 16px;
+      margin-bottom: 60px;
+      width: 60%;
+    }
+  }
+
+  .introduce {
+    background-image: none;
+
+    &__content {
+      flex-basis: 100%;
+    }
+  }
+
+  .our-services {
+    padding-top: 60px;
+
+    &__description {
+      width: 85%;
+    }
+  }
+
+  .our-skills {
+    .row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .skill {
+    flex-basis: 162px;
+    padding: 0 15px 15px;
+  }
+
+  //portfolios
+
+  .portfolios {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__description {
+      margin-bottom: 60px;
+      font-size: 16px;
+      width: 60%;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__see-all {
+      margin-top: 60px;
+    }
+
+    &__link {
+      padding: 10px 30px;
+    }
+  }
+
+  .project {
+    flex-basis: 50%;
+
+    &__content {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  //our-members
+
+  .our-members {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__description {
+      margin-bottom: 60px;
+      font-size: 16px;
+      width: 60%;
+    }
+  }
+
+  .member {
+    &__link {
+      font-size: 18px;
+    }
+  }
+
+  .client-review {
+    padding-bottom: 60px;
+
+    &__description {
+      box-sizing: border-box;
+      font-size: 16px;
+      padding: 0 30px;
+      width: 100%;
+    }
+  }
+
+  // our-blog
+
+  .our-blog {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__description {
+      margin-bottom: 60px;
+      font-size: 16px;
+      width: 60%;
+    }
+
+    &__timeline {
+      padding-bottom: 40px;
+    }
+  }
+
+  .post {
+    &__thumbnail,
+    &__content {
+      padding: 0 20px;
+    }
+
+    &__arrow-control {
+      display: none;
+    }
+
+    &__dot-control {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  //footer
+
+  .footer {
+    .row {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      box-sizing: border-box;
+      flex-basis: 33.33%;
+    }
+  }
+
+  .blog-posts {
+    padding-left: 0;
+  }
+
+  .epilogue {
+    flex-basis: 100%;
+  }
+}

@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.dot-control {
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 3px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid $light;
+    transition: all .4s;
+  }
+
+  & > :nth-child(n) {
+    display: inline-block;
+    list-style-type: none;
+  }
+
+  .slick-active &__item {
+    background: $light;
+  }
+}

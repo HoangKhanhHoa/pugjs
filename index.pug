@@ -1,0 +1,239 @@
+extends modules/_layout
+
+block head
+  +head('Mairala | Home')
+
+block main
+  //header
+  header.header(class='js-header')
+    .container
+      .row
+        //logo
+        h1.header__logo
+          a(href='#') Mairala
+
+        .header__collapse
+          button.header__button(type='button' class='js-button-collapse')
+            i(class='fas fa-bars')
+        //navigation
+        nav.header__nav(class='js-header-nav')
+          ul.nav
+            -var linkName = ['Home', 'About', 'Portfolios', 'Team', 'Blog', 'Contact']
+            each val in linkName
+              li.nav__item
+                if val == 'Home'
+                  a.nav__link.nav__link--active(href='#')= val
+                else
+                  a.nav__link(href='#' + val.toLowerCase())= val
+
+  //carousel-advertisement
+  section.carousel-ads
+    //carousel-main
+    .carousel-ads__main(class='js-carousel-ads')
+      -
+        var carousel = [{'img': 'bg-carousel-wood.JPG','des': 'Grab your copy of'},
+                        {'img': 'bg-carousel-bike.JPG', 'des': 'Grab your copy of'},
+                        {'img': 'bg-carousel-accessories.JPG', 'des': 'Grab your copy of'}]
+      each val in carousel
+        .carousel-ads__item
+          img.carousel-ads__img(src='images/' + val.img alt= 'Carousel Image')
+          .container
+            .row
+              .carousel-ads__content
+                p.carousel-ads__description= val.des
+                h2.carousel-ads__title The #[span.carousel-ads__highlight premium] quality psd template for #[span.carousel-ads__highlight free]
+                .carousel-ads__download
+                  a.carousel-ads__link(href='#') Download #[i(class='fas fa-download')]
+
+    //carousel-control
+    .carousel-ads__control
+      button.control-prev(type='button' class='js-btn-prev')
+        i(class='fas fa-chevron-left')
+      button.control-next(type='button' class='js-btn-next')
+        i(class='fas fa-chevron-right')
+
+  //about-us
+  section#about.about-us
+    h2.about-us__title Know about us
+    p.about-us__description Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
+    //introduce
+    .introduce
+      .container
+        .row
+          .introduce__content
+            h3.introduce__title We are the best
+            p.introduce__description Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            p.introduce__description Volutpat wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum
+            .introduce__read-more
+              a.introduce__link(href='#') Read more #[i(class='fas fa-long-arrow-alt-right')]
+
+    //our-services
+    .our-services
+      .container
+        h3.our-services__title Services we provide
+        p.our-services__description Volutpat wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+        .row
+          -
+            var des = 'Claritas est etiam processus dynaicus qui sequitur mutationem consuetudium lectorum. Mirum est notare quam'
+            var services = {'consultancy': {'icon': 'fa-users', 'des': des},
+                          'marketing': {'icon': 'fa-bullhorn', 'des': des},
+                          'research': {'icon': 'fa-flask', 'des': des}}
+          each val, index in services
+            .service
+              .service__icon
+                i.fas(class= val.icon)
+              h4.service__title
+                a.service__link(href='#')= index
+              p.service__description= val.des
+
+    //our-skills
+    .our-skills(class='js-our-skills')
+      h3.our-skills__title Our skills
+      .container
+        .row
+          -var skills = {'marketing': '85', 'research': '75', 'management': '50', 'consultancy': '25', 'promotion': '100'}
+          each val, index in skills
+            .skill
+              .skill__circle
+                .skill__bar.js-skill-bar(data-skill= val)
+                .skill__point= val + '%'
+              .skill__name= index
+
+  //portfolios
+  section#portfolios.portfolios
+    h2.portfolios__title Some recent projects
+    p.portfolios__description Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
+    +portfolios-list
+    .latest-project
+      h3.latest-project__title Latest from twitter
+      p.latest-project__description Trying out velositey - a simple website building extension for Photoshop
+      .latest-project__
+        a.latest-project__link(href='#') buff.ly/NC8gog
+    +portfolios-list
+    .portfolios__see-all
+      a.portfolios__link(href='#') See all #[i(class='fas fa-long-arrow-alt-right')]
+
+  //our-members
+  section#team.our-members
+    h2.our-members__title Our team members
+    p.our-members__description Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
+    .container
+      .row
+        //member
+        -
+          var member = {'name': 'Mitchell Anderson', 'ava': 'member.JPG', 'twitter': '#t', 'facebook': '#fb', 'linkedin': '#in', 'position': 'Creative Director'}
+          var members = [member, member, member]
+        each val in members
+          .member
+            .member__header
+              img.member__avatar(src='images/' + val.ava alt= val.name)
+              .member__social
+                a.member__link-social(href= val.twitter) #[i(class='fab fa-twitter')]
+                a.member__link-social(href= val.facebook) #[i(class='fab fa-facebook-f')]
+                a.member__link-social(href= val.linkedin) #[i(class='fab fa-linkedin-in')]
+            .member__infor
+              .member__name
+                a.member__link(href='#')= val.name
+              p.member__position= val.position
+
+    //client-review
+    .client-review
+      .js-carousel-review
+        -
+          var data = {'title': 'What Our Clients are saying',
+                      'des': '"It was a pleasure to work with Imran. He is very dedicated and professional. He worked very hard to satisfy our requirements and the communication was great."',
+                      'author': 'John Doe',
+                      'link': 'www.yourwebsite.zt'}
+        -var reviews = [data, data, data]
+        each val in reviews
+          .client-review__content
+            h3.client-review__title= val.title
+            p.client-review__description= val.des
+            .client-review__author
+              p.client-review__author-name= val.author
+              .client-review__author-website
+                a.client-review__link(href='#')= val.link
+      .client-review__control.js-review-control
+
+  //our-blog
+  section#blog.our-blog
+    h2.our-blog__title Our blog
+    p.our-blog__description Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
+    .our-blog__timeline
+      .container
+        +post({side: 'left', slideId: 'carousel-first'})
+        +post({side: 'right', slideId: 'carousel-second'})
+        +post({side: 'left', slideId: 'carousel-third'})
+    .our-blog__all-post
+      a.our-blog__link(href='#') All post
+
+  //contact-us
+  section#contact.contact-us
+    h2.contact-us__title Contact
+    .container
+      .row
+        form.form-contact(action='#' method='POST')
+          .form-contact__group
+            input.form-contact__input(type='text' name='name' required autocomplete='off' class='js-input')
+            span.form-contact__hint(data-holder='Name*')
+          .form-contact__group
+            input.form-contact__input(type='email' name='email' required autocomplete='off' class='js-input')
+            span.form-contact__hint(data-holder='Email*')
+          .form-contact__group
+            textarea.form-contact__textarea(name='message' rows='5' class='js-input')
+            span.form-contact__hint(data-holder='Message...')
+          .form-contact__submit
+            button.form-contact__button(type='submit') Submit
+
+  //footer
+  footer.footer
+    .container.footer__main
+      .row
+        //epilogue
+        .footer__item.epilogue
+          p.epilogue__logo
+            a.epilogue__link(href='#') Mairala
+          p.epilogue__description Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.
+          p.epilogue__description eugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta
+
+        //blog-posts
+        .footer__item.blog-posts
+          h3.blog-posts__title Recent posts
+          -
+            var posts = [{'date': 'March 30, 2014', 'title': 'Duis autem vel eum iriure dolor'},
+                        {'date': 'March 30, 2014', 'title': 'Duis autem vel eum iriure dolor'},
+                        {'date': 'March 30, 2014', 'title': 'Duis autem vel eum iriure dolor'}]
+          each val in posts
+            .blog-posts__item
+              p.blog-posts__date= val.date
+              a.blog-posts__link(href='#')= val.title
+
+        //twitter-feeds
+        .footer__item.twitter-feeds
+          h3.twitter-feeds__title Twitter Feeds
+          -
+            var feeds = [{'author': '@kristianplatt', 'title': 'Good work buddy'},
+                        {'author': '@fasteven', 'title': 'Good work buddy'},
+                        {'author': '@streamer', 'title': 'Good work buddy'}]
+          each val in feeds
+            .twitter-feeds__item
+              p.twitter-feeds__time about 2 days ago #[a.twitter-feeds__author(href='#')= val.author]
+              a.twitter-feeds__link(href='#')= val.title
+
+        //our-address
+        .footer__item.our-address
+          h3.our-address__title Our address
+          p.our-address__description Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus,luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta
+          .our-address__detail
+            -
+              var address = [{'icon': 'fa-map-marker-alt', 'text': 'Moonshine St. 14/05 Light, Jupiter'},
+                            {'icon': 'fa-phone-alt','text': '+00 (123) 456 78 90'},
+                            {'icon': 'fa-envelope', 'text': 'first.last@email.com'}]
+            each val in address
+              if val.text.includes('.com')
+                p.our-address__item #[i.fas(class= val.icon)] #[a.our-address__mail(href='mailto:' + val.text)= val.text]
+              else
+                p.our-address__item #[i.fas(class= val.icon)] #{val.text}
+
+    .footer__end
+      p.copyright &copy; 2014 Imran Khan All Rights Reserved

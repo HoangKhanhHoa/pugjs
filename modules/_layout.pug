@@ -1,0 +1,14 @@
+include _head
+include _portfolios-list
+include _post
+
+doctype html
+html(lang='en')
+  head
+    block head
+
+  body
+    block body
+      block main
+
+    script(src='js/main.js')

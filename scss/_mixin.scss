@@ -1,0 +1,51 @@
+@mixin text-format($color, $font_family, $font_size, $letter_spacing) {
+  color: $color;
+  font-family: $font_family;
+  font-size: $font_size;
+  letter-spacing: $letter_spacing;
+}
+
+@mixin section-title {
+  @include text-format($brown-1, $font-raleway-semibold, 40px, 2px);
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:after {
+    content: '';
+    background-color: $brown-1;
+    display: block;
+    height: 6px;
+    width: 76px;
+    margin: 42px auto 40px;
+  }
+}
+
+@mixin section-des {
+  @include text-format($dark-3, $font-raleway-reg, 18px, 1px);
+  line-height: 30px;
+  text-align: center;
+  width: 40%;
+}
+
+@mixin sub-title {
+  font-family: $font-raleway-med;
+  font-size: 24px;
+  color: $brown-1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin btn-arrow-control($color, $font-size, $left, $right) {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: $font-size;
+  color: $color;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: $left;
+  right: $right;
+  transform: translateY(-50%);
+}
