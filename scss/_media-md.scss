@@ -12,6 +12,10 @@
   //carousel advertisment
 
   .carousel-ads {
+    &__content {
+      padding: 0 15px;
+    }
+
     &__title {
       font-size: 54px;
       width: 100%;
@@ -29,6 +33,7 @@
   .control-prev,
   .control-next {
     font-size: 32px;
+    transform: translateY(-50%);
   }
 
   // about-us
@@ -163,6 +168,10 @@
     &__thumbnail,
     &__content {
       padding: 0 20px;
+    }
+
+    &__img {
+      width: auto;
     }
 
     &__arrow-control {

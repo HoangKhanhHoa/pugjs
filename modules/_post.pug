@@ -4,7 +4,7 @@ mixin post({side, slideId})
       .post__thumbnail(id= slideId class='post__thumbnail--left')
         .js-carousel-thumbnail
           -
-            var imgs = ['post-thumbnail.JPG', 'post-thumbnail.JPG', 'post-thumbnail.JPG']
+            var imgs = ['post-thumbnail.JPG', 'pj-pencil.JPG', 'pj-umbrella.JPG']
           each val in imgs
             .post__wrapper-img
               img.post__img(src='images/' + val alt='Blog Thumbnail')
@@ -24,7 +24,7 @@ mixin post({side, slideId})
       .post__thumbnail(id= slideId class='post__thumbnail--right')
         .js-carousel-thumbnail
           -
-            var imgs = ['post-thumbnail.JPG', 'post-thumbnail.JPG', 'post-thumbnail.JPG']
+            var imgs = ['post-thumbnail.JPG', 'pj-umbrella.JPG', 'pj-clip.JPG']
           each val in imgs
             .post__wrapper-img
               img.post__img(src='images/' + val alt='Blog Thumbnail')
@@ -38,4 +38,4 @@ mixin post({side, slideId})
         p.post__date 20 March 2014
         h3.post__title
           a.post__link(href='#') Typi non habent claritatem insitam
-        p.post__detail(class='js-post-detail') Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui [...]
+        p.post__detail(class='js-post-detail') Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui dignissim dignissim dignissim
