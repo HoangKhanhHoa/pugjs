@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'OratorStd Regular';
-  src: url("../font/OratorStd.otf"); }
+  src: url("../font/OratorStd.ttf"); }
 
 body {
   margin: 0; }
@@ -63,7 +63,7 @@ body {
   .slick-active .dot-control__item {
     background: #fff; }
 
-/* HEADER */
+/* header */
 .header {
   background: #303030;
   position: fixed;
@@ -72,6 +72,7 @@ body {
   .header__logo {
     font-size: 48px;
     font-family: "OleoScript Regular";
+    font-weight: 400;
     margin: 16px 0 14px; }
     .header__logo :only-child {
       color: #fff;
@@ -93,6 +94,8 @@ body {
       color: #000; }
   .header__nav {
     margin: auto 0 auto auto; }
+  .header .row {
+    position: relative; }
 
 .nav {
   font-size: 0;
@@ -120,6 +123,7 @@ body {
       height: 4px;
       width: 100%;
       position: absolute;
+      left: 0;
       top: 100%;
       transform: scaleX(0);
       transition: transform .4s ease-in-out; }
@@ -128,21 +132,30 @@ body {
     .nav__link--active:after {
       transform: scaleX(1); }
 
-/* CAROUSEL ADVERTISEMENT */
+/* carousel advertisement */
 .carousel-ads {
   padding-top: 96px;
   position: relative;
   min-height: 674px;
   max-width: 1920px;
-  margin: auto; }
-  .carousel-ads__item.slick-active .carousel-ads__img {
-    opacity: 1;
-    transform: scale(1); }
-  .carousel-ads__item.slick-active .carousel-ads__description,
-  .carousel-ads__item.slick-active .carousel-ads__title,
-  .carousel-ads__item.slick-active .carousel-ads__link,
-  .carousel-ads__item.slick-active .carousel-ads__highlight {
-    opacity: 1; }
+  margin: auto;
+  overflow: hidden; }
+  .carousel-ads__item {
+    overflow: hidden; }
+    .carousel-ads__item.slick-active .carousel-ads__img {
+      opacity: 1;
+      transform: scale(1); }
+    .carousel-ads__item.slick-active .carousel-ads__description {
+      opacity: 1;
+      transition: opacity .6s .3s; }
+    .carousel-ads__item.slick-active .carousel-ads__title {
+      opacity: 1;
+      transition: opacity .6s .6s; }
+    .carousel-ads__item.slick-active .carousel-ads__highlight {
+      opacity: 1; }
+    .carousel-ads__item.slick-active .carousel-ads__link {
+      opacity: 1;
+      transition: opacity .6s .9s, background-color .4s; }
   .carousel-ads__img {
     height: 100%;
     opacity: 0;
@@ -158,8 +171,7 @@ body {
     letter-spacing: 2px;
     margin: 0;
     opacity: 0;
-    text-transform: uppercase;
-    transition: opacity .6s .4s; }
+    text-transform: uppercase; }
   .carousel-ads__title {
     color: #fff;
     font-family: "Raleway Regular";
@@ -170,7 +182,6 @@ body {
     margin-top: 10px;
     opacity: 0;
     text-transform: uppercase;
-    transition: opacity .6s .7s;
     width: 70%; }
   .carousel-ads__highlight {
     color: #7b6c63;
@@ -182,19 +193,19 @@ body {
     font-size: 16px;
     letter-spacing: 2px;
     background: #24211e;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 20px 60px 20px 70px;
     opacity: 0;
     text-decoration: none;
-    text-transform: uppercase;
-    transition: opacity .6s 1s, background-color .4s; }
+    text-transform: uppercase; }
     .carousel-ads__link:hover {
       background: #7b6c63; }
+  .carousel-ads:hover .control-next {
+    transform: translate(0, -50%); }
+  .carousel-ads:hover .control-prev {
+    transform: translate(0, -50%); }
 
-/* CONTROL CAROUSEL BUTTON */
-.control-next {
-  right: 0; }
-
+/* control carousel button */
 .control-prev,
 .control-next {
   background: transparent;
@@ -206,12 +217,20 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: color .4s; }
+  transform: translate(-100%, -50%);
+  transition: all .4s; }
   .control-prev:hover,
   .control-next:hover {
     color: #fff; }
+  .control-prev::-moz-focus-inner,
+  .control-next::-moz-focus-inner {
+    border: 0; }
 
-/* ABOUT-US */
+.control-next {
+  right: 0;
+  transform: translate(100%, -50%); }
+
+/* about-us */
 .about-us {
   padding-top: 80px; }
   .about-us__title {
@@ -239,7 +258,7 @@ body {
     width: 40%;
     margin: 0 auto 86px; }
 
-/* INTRODUCE */
+/* introduce */
 .introduce {
   background: #f5f5f5;
   background-image: url("../images/about-us-introduce.PNG");
@@ -276,7 +295,7 @@ body {
     font-size: 16px;
     letter-spacing: 1px;
     border: 2px solid #000;
-    border-radius: 2px;
+    border-radius: 3px;
     display: inline-block;
     padding: 13px 20px;
     text-decoration: none;
@@ -303,7 +322,7 @@ body {
   .introduce__img {
     width: 100%; }
 
-/* OUR SERVICES */
+/* our services */
 .our-services {
   padding-top: 84px;
   padding-bottom: 55px; }
@@ -358,7 +377,7 @@ body {
     line-height: 24px;
     text-align: center; }
 
-/* OUR SKILLS */
+/* our skills */
 .our-skills {
   background: url("../images/bg-our-skills.JPG") 50% 0% no-repeat;
   padding-top: 100px;
@@ -383,9 +402,6 @@ body {
   width: 162px;
   position: relative; }
 
-.skill__bar {
-  padding: 4px; }
-
 .skill__point {
   color: #fff;
   font-family: "OpenSans Regular";
@@ -405,7 +421,7 @@ body {
   text-align: center;
   text-transform: capitalize; }
 
-/* PORTFOLIOS */
+/* portfolios */
 .portfolios {
   max-width: 1920px;
   margin: auto;
@@ -446,7 +462,7 @@ body {
     font-size: 16px;
     letter-spacing: 1px;
     border: 2px solid #000;
-    border-radius: 3px;
+    border-radius: 5px;
     display: inline-block;
     padding: 14px 40px;
     text-decoration: none;
@@ -471,7 +487,7 @@ body {
       .portfolios__link:hover:before {
         transform: scaleX(1); }
 
-/* PROJECT */
+/* project */
 .project {
   flex-basis: 25%;
   position: relative;
@@ -525,7 +541,7 @@ body {
     opacity: 1;
     transform: scale(1) translate(0); }
 
-/* LATEST PROJECT */
+/* latest project */
 .latest-project {
   background: #1a1a1a;
   padding-bottom: 136px;
@@ -559,7 +575,7 @@ body {
     .latest-project__link:hover {
       color: #59d2f5; }
 
-/* OUR MEMBERS */
+/* our members */
 .our-members {
   background: #f5f5f5;
   padding-top: 80px; }
@@ -590,7 +606,7 @@ body {
   .our-members .container {
     margin-bottom: 90px; }
 
-/* MEMBER */
+/* member */
 .member {
   flex-basis: 33.33%;
   padding-left: 15px;
@@ -651,7 +667,10 @@ body {
     font-size: 24px;
     letter-spacing: 1px;
     text-decoration: none;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    transition: color .5s; }
+    .member__link:hover {
+      color: #7b6c63; }
   .member__position {
     color: #000;
     font-family: "OratorStd Regular";
@@ -661,7 +680,7 @@ body {
     text-align: center;
     text-transform: uppercase; }
 
-/* CLIENT REVIEW */
+/* client review */
 .client-review {
   background: #1a1a1a;
   padding-bottom: 84px;
@@ -724,7 +743,7 @@ body {
     margin-top: 34px;
     text-align: center; }
 
-/* OUR BLOG */
+/* our blog */
 .our-blog {
   padding-bottom: 92px;
   padding-top: 80px; }
@@ -778,13 +797,27 @@ body {
     text-decoration: none;
     text-transform: capitalize;
     padding: 20px;
+    position: relative;
     height: 90px;
     width: 90px;
     transition: background-color .4s ease-in-out; }
+    .our-blog__link:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: border .6s;
+      height: 74px;
+      width: 74px;
+      border: 0 solid #929292;
+      border-radius: 50%; }
     .our-blog__link:hover {
       background: #6d4e3c; }
+      .our-blog__link:hover:before {
+        border-width: 8px; }
 
-/* POST */
+/* post */
 .post {
   margin-bottom: 60px; }
   .post--reverse {
@@ -796,8 +829,17 @@ body {
       text-align: right; }
   .post:last-child {
     margin: 0; }
+  .post__wrapper-img {
+    max-height: 270px;
+    overflow: hidden; }
+    .post__wrapper-img.slick-active .post__img {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+      transition-delay: .3s; }
   .post__img {
-    box-sizing: border-box; }
+    opacity: 0;
+    transform: scale(2);
+    transition: .5s ease-in-out; }
   .post__thumbnail {
     flex-basis: 50%;
     margin-left: 30px;
@@ -852,7 +894,7 @@ body {
     background: #7b6c63; }
   .post__content {
     box-sizing: border-box;
-    flex-basis: 50%;
+    width: 50%;
     padding: 0 40px; }
   .post__date {
     color: #7b6c63;
@@ -868,7 +910,10 @@ body {
     font-family: "Raleway Regular";
     font-size: 24px;
     letter-spacing: 1px;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: color .4s; }
+    .post__link:hover {
+      color: #7b6c63; }
   .post__detail {
     color: #b2b2b2;
     font-family: "Raleway Medium";
@@ -876,7 +921,7 @@ body {
     letter-spacing: 1px;
     line-height: 30px; }
 
-/* CONTACT US */
+/* contact us */
 .contact-us {
   background: #f5f5f5;
   padding-bottom: 58px;
@@ -901,21 +946,21 @@ body {
   .contact-us .row {
     padding: 0; }
 
-/* FORM CONTACT */
+/* form contact */
 .form-contact {
   display: flex;
   flex-wrap: wrap;
   margin: 78px auto 0;
   width: 66.67%; }
   .form-contact__group {
-    flex-basis: 50%;
+    width: 50%;
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 0 15px;
     position: relative;
     z-index: 2; }
     .form-contact__group:nth-child(3) {
-      flex-basis: 100%;
+      width: 100%;
       margin-bottom: 4px; }
   .form-contact__input {
     width: 100%;
@@ -929,6 +974,8 @@ body {
     transition: all .4s; }
     .form-contact__input--focus + .form-contact__hint:before {
       transform: translateY(-100%); }
+    .form-contact__input:required:invalid {
+      box-shadow: none; }
   .form-contact__textarea {
     background: transparent;
     border-width: 4px 0 0 0;
@@ -939,7 +986,8 @@ body {
     padding: 14px 16px;
     outline: none;
     resize: none;
-    width: 100%; }
+    width: 100%;
+    overflow: auto; }
   .form-contact__hint:before {
     color: #5b5b5b;
     font-family: "OpenSans Regular";
@@ -989,7 +1037,7 @@ body {
       .form-contact__button:hover:before {
         height: 400%; }
 
-/* FOOTER */
+/* footer */
 .footer {
   background: #222; }
   .footer__main {
@@ -1006,7 +1054,7 @@ body {
     padding: 12px 0;
     text-align: center; }
 
-/* EPILOGUE */
+/* epilogue */
 .epilogue__logo {
   margin: 10px 0 0; }
 
@@ -1028,7 +1076,7 @@ body {
   margin-bottom: 24px;
   line-height: 24px; }
 
-/* BLOG POSTS */
+/* blog posts */
 .blog-posts__title {
   color: #fff;
   font-family: "Raleway Regular";
@@ -1060,7 +1108,7 @@ body {
   .blog-posts__link:hover {
     color: #dfdfdf; }
 
-/* TWITTER FEEDS */
+/* twitter feeds */
 .twitter-feeds__title {
   color: #fff;
   font-family: "Raleway Regular";
@@ -1100,7 +1148,7 @@ body {
   .twitter-feeds__link:hover {
     color: #dfdfdf; }
 
-/* OUR ADDRESS */
+/* our address */
 .our-address__title {
   color: #fff;
   font-family: "Raleway Regular";
@@ -1138,6 +1186,13 @@ body {
   font-size: 16px;
   letter-spacing: 1px; }
 
+/* IE navgation */
+.ie {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%); }
+
 @media screen and (max-width: 1199px) {
   .carousel-ads__title {
     font-size: 60px;
@@ -1157,6 +1212,14 @@ body {
     padding-top: 60px; }
   .member__avatar {
     width: 100%; }
+  .post--reverse .post__thumbnail {
+    margin-right: 0; }
+  .post__thumbnail {
+    box-sizing: border-box;
+    max-width: 50%;
+    margin-left: 0; }
+  .post__wrapper-img {
+    max-height: 220px; }
   .post__img {
     width: 100%; }
   .contact-us {
@@ -1164,6 +1227,8 @@ body {
 
 @media screen and (max-width: 991px) {
   .header .nav__item {
+    padding: 0 15px; }
+  .carousel-ads__content {
     padding: 0 15px; }
   .carousel-ads__title {
     font-size: 54px;
@@ -1174,7 +1239,8 @@ body {
     padding: 20px 50px; }
   .control-prev,
   .control-next {
-    font-size: 32px; }
+    font-size: 32px;
+    transform: translateY(-50%); }
   .about-us {
     padding-top: 60px; }
     .about-us__title {
@@ -1239,6 +1305,8 @@ body {
     padding-bottom: 40px; }
   .post__thumbnail, .post__content {
     padding: 0 20px; }
+  .post__img {
+    width: auto; }
   .post__arrow-control {
     display: none; }
   .post__dot-control {
@@ -1300,6 +1368,10 @@ body {
       padding: 0; }
       .post__thumbnail:after {
         content: none; }
+    .post__wrapper-img {
+      max-height: unset; }
+    .post__img {
+      width: 100%; }
     .post__arrow-control {
       display: block; }
     .post__control-prev, .post__control-next {
@@ -1313,6 +1385,8 @@ body {
       text-align: justify; }
     .post--reverse .post__thumbnail {
       margin-right: 0; }
+  .member__social {
+    display: none; }
   .form-contact {
     width: 100%; }
     .form-contact__submit {

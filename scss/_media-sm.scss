@@ -96,6 +96,14 @@
       }
     }
 
+    &__wrapper-img {
+      max-height: unset;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
     &__arrow-control {
       display: block;
     }
@@ -124,6 +132,13 @@
     }
   }
 
+  //our-members
+
+  .member {
+    &__social {
+      display: none;
+    }
+  }
   //contact-us
 
   .form-contact {

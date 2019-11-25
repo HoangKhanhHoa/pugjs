@@ -51,6 +51,24 @@
   // our-blog
 
   .post {
+    $this: &;
+
+    &--reverse {
+      #{$this}__thumbnail {
+        margin-right: 0;
+      }
+    }
+
+    &__thumbnail {
+      box-sizing: border-box;
+      max-width: 50%;
+      margin-left: 0;
+    }
+
+    &__wrapper-img {
+      max-height: 220px;
+    }
+
     &__img {
       width: 100%;
     }

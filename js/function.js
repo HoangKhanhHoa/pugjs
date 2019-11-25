@@ -1,28 +1,26 @@
 /**
- * Use on window scroll
+ * Use on window scroll to show skill bar
  */
 function runSkillBar() {
-  var ourSkill = document.querySelector('.js-our-skills');
-  var topDistance = ourSkill.offsetTop;
-  var ourSkillHeight = ourSkill.offsetHeight;
-  var scrollTop = window.scrollY;
-  if (scrollTop > topDistance - ourSkillHeight/2) {
-    var skillBars = document.querySelectorAll('.js-skill-bar');
-    for (var item of skillBars) {
-      var skillPoint = item.getAttribute('data-skill');
-      var bar = new ProgressBar.Circle(item, {
-        strokeWidth: 3,
-        easing: 'easeInOut',
-        duration: 1400,
+  var ourSkill = $('.js-our-skills');
+  var topDistance = ourSkill.offset().top;
+  var ourSkillHeight = ourSkill.height();
+  var scrollTop = window.pageYOffset;
+  if (scrollTop > topDistance - ourSkillHeight) {
+    $('.js-skill-bar').each(function() {
+      var skillPoint = $(this).attr('data-skill');
+      $(this).circularProgress({
+        line_width: 3,
         color: '#ffffff',
-        trailColor: 'transparent',
-        trailWidth: 1,
-        svgStyle: null,
-      });
+        width: '162px',
+        height: '162px',
+        starting_position: 0,
+        padding: 4,
+        percent: 0,
+        percentage: true,
+      }).circularProgress('animate', skillPoint, 300);
+    });
 
-      bar.animate(skillPoint/100);
-
-      window.removeEventListener('scroll', runSkillBar);
-    }
+    window.removeEventListener('scroll', runSkillBar);
   }
 }

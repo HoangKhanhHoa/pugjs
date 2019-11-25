@@ -1,4 +1,4 @@
-/* HEADER */
+/* header */
 
 .header {
   background: $gray-9;
@@ -9,6 +9,7 @@
   &__logo {
     font-size: 48px;
     font-family: $font-oleoscript-reg;
+    font-weight: 400;
     margin: 16px 0 14px;
 
     & :only-child {
@@ -41,6 +42,10 @@
   &__nav {
     margin: auto 0 auto auto;
   }
+
+  .row {
+    position: relative;
+  }
 }
 
 .nav {
@@ -72,6 +77,7 @@
       height: 4px;
       width: 100%;
       position: absolute;
+      left: 0;
       top: 100%;
       transform: scaleX(0);
       transition: transform .4s ease-in-out;
@@ -91,7 +97,7 @@
   }
 }
 
-/* CAROUSEL ADVERTISEMENT */
+/* carousel advertisement */
 
 .carousel-ads {
   $this: &;
@@ -100,19 +106,34 @@
   min-height: 674px;
   max-width: 1920px;
   margin: auto;
+  overflow: hidden;
 
   &__item {
+    overflow: hidden;
+
     &.slick-active {
       #{$this}__img {
         opacity: 1;
         transform: scale(1);
       }
 
-      #{$this}__description,
-      #{$this}__title,
-      #{$this}__link,
+      #{$this}__description {
+        opacity: 1;
+        transition: opacity .6s .3s;
+      }
+
+      #{$this}__title {
+        opacity: 1;
+        transition: opacity .6s .6s;
+      }
+
       #{$this}__highlight {
         opacity: 1;
+      }
+
+      #{$this}__link {
+        opacity: 1;
+        transition: opacity .6s .9s, background-color .4s;
       }
     }
   }
@@ -134,7 +155,6 @@
     margin: 0;
     opacity: 0;
     text-transform: uppercase;
-    transition: opacity .6s .4s;
   }
 
   &__title {
@@ -144,7 +164,6 @@
     margin-top: 10px;
     opacity: 0;
     text-transform: uppercase;
-    transition: opacity .6s .7s;
     width: 70%;
   }
 
@@ -157,36 +176,51 @@
   &__link {
     @include text-format($light, $font-raleway-reg, 16px, 2px);
     background: $dark-5;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 20px 60px 20px 70px;
     opacity: 0;
     text-decoration: none;
     text-transform: uppercase;
-    transition: opacity .6s 1s, background-color .4s;
 
     &:hover {
       background: $brown-1;
     }
   }
+
+  &:hover {
+    .control-next {
+      transform: translate(0, -50%);
+    }
+
+    .control-prev {
+      transform: translate(0, -50%);
+    }
+  }
 }
 
-/* CONTROL CAROUSEL BUTTON */
-
-.control-next {
-  right: 0;
-}
+/* control carousel button */
 
 .control-prev,
 .control-next {
   @include btn-arrow-control($gray-3, 40px, null, null);
-  transition: color .4s;
+  transform: translate(-100%, -50%);
+  transition: all .4s;
 
   &:hover {
     color: $light;
   }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
 }
 
-/* ABOUT-US */
+.control-next {
+  right: 0;
+  transform: translate(100%, -50%);
+}
+
+/* about-us */
 
 .about-us {
   padding-top: 80px;
@@ -201,7 +235,7 @@
   }
 }
 
-/* INTRODUCE */
+/* introduce */
 
 .introduce {
   $this: &;
@@ -240,7 +274,7 @@
   &__link {
     @include text-format($dark, $font-raleway-reg, 16px, 1px);
     border: 2px solid $dark;
-    border-radius: 2px;
+    border-radius: 3px;
     display: inline-block;
     padding: 13px 20px;
     text-decoration: none;
@@ -277,7 +311,7 @@
   }
 }
 
-/* OUR SERVICES */
+/* our services */
 
 .our-services {
   padding-top: 84px;
@@ -340,7 +374,7 @@
   }
 }
 
-/* OUR SKILLS */
+/* our skills */
 
 .our-skills {
   background: url('../images/bg-our-skills.JPG') 50% 0% no-repeat;
@@ -369,9 +403,10 @@
     position: relative;
   }
 
-  &__bar {
-    padding: 4px;
-  }
+  // &__bar {
+  //   padding: 4px;
+  //   box-sizing: border-box;
+  // }
 
   &__point {
     @include text-format($light, $font-opensans-reg, 16px, null);
@@ -390,7 +425,7 @@
   }
 }
 
-/* PORTFOLIOS */
+/* portfolios */
 
 .portfolios {
   max-width: 1920px;
@@ -419,7 +454,7 @@
   &__link {
     @include text-format($dark, $font-raleway-med, 16px, 1px);
     border: 2px solid $dark;
-    border-radius: 3px;
+    border-radius: 5px;
     display: inline-block;
     padding: 14px 40px;
     text-decoration: none;
@@ -452,7 +487,7 @@
   }
 }
 
-/* PROJECT */
+/* project */
 
 .project {
   flex-basis: 25%;
@@ -520,7 +555,7 @@
   }
 }
 
-/* LATEST PROJECT */
+/* latest project */
 
 .latest-project {
   background: $dark-1;
@@ -556,7 +591,7 @@
   }
 }
 
-/* OUR MEMBERS */
+/* our members */
 
 .our-members {
   background: $light-1;
@@ -576,7 +611,7 @@
   }
 }
 
-/* MEMBER */
+/* member */
 
 .member {
   $this: &;
@@ -660,6 +695,11 @@
     @include text-format($dark, $font-raleway-reg, 24px, 1px);
     text-decoration: none;
     text-transform: uppercase;
+    transition: color .5s;
+
+    &:hover {
+      color: $brown-1;
+    }
   }
 
   &__position {
@@ -670,7 +710,7 @@
   }
 }
 
-/* CLIENT REVIEW */
+/* client review */
 
 .client-review {
   $this: &;
@@ -747,7 +787,7 @@
   }
 }
 
-/* OUR BLOG */
+/* our blog */
 
 .our-blog {
   padding-bottom: 92px;
@@ -792,17 +832,35 @@
     text-decoration: none;
     text-transform: capitalize;
     padding: 20px;
+    position: relative;
     height: 90px;
     width: 90px;
     transition: background-color .4s ease-in-out;
 
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: border .6s;
+      height: 74px;
+      width: 74px;
+      border: 0 solid $gray-2;
+      border-radius: 50%;
+    }
+
     &:hover {
       background: $brown-2;
+
+      &:before {
+        border-width: 8px;
+      }
     }
   }
 }
 
-/* POST */
+/* post */
 
 .post {
   $this: &;
@@ -825,8 +883,23 @@
     margin: 0;
   }
 
+  &__wrapper-img {
+    max-height: 270px;
+    overflow: hidden;
+
+    &.slick-active {
+      #{$this}__img {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+        transition-delay: .3s;
+      }
+    }
+  }
+
   &__img {
-    box-sizing: border-box;
+    opacity: 0;
+    transform: scale(2);
+    transition: .5s ease-in-out;
   }
 
   &__thumbnail {
@@ -891,7 +964,7 @@
 
   &__content {
     box-sizing: border-box;
-    flex-basis: 50%;
+    width: 50%;
     padding: 0 40px;
   }
 
@@ -908,6 +981,11 @@
   &__link {
     @include text-format($dark, $font-raleway-reg, 24px, 1px);
     text-decoration: none;
+    transition: color .4s;
+
+    &:hover {
+      color: $brown-1;
+    }
   }
 
   &__detail {
@@ -916,7 +994,7 @@
   }
 }
 
-/* CONTACT US */
+/* contact us */
 
 .contact-us {
   background: $light-1;
@@ -936,7 +1014,7 @@
   }
 }
 
-/* FORM CONTACT */
+/* form contact */
 
 .form-contact {
   $this: &;
@@ -946,7 +1024,7 @@
   width: 66.67%;
 
   &__group {
-    flex-basis: 50%;
+    width: 50%;
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 0 15px;
@@ -954,7 +1032,7 @@
     z-index: 2;
 
     &:nth-child(3) {
-      flex-basis: 100%;
+      width: 100%;
       margin-bottom: 4px;
     }
   }
@@ -975,6 +1053,10 @@
         transform: translateY(-100%);
       }
     }
+
+    &:required:invalid {
+      box-shadow: none;
+    }
   }
 
   &__textarea {
@@ -988,6 +1070,7 @@
     outline: none;
     resize: none;
     width: 100%;
+    overflow: auto;
   }
 
   &__hint {
@@ -1047,7 +1130,7 @@
   }
 }
 
-/* FOOTER */
+/* footer */
 
 .footer {
   background: $dark-4;
@@ -1076,7 +1159,7 @@
   }
 }
 
-/* EPILOGUE */
+/* epilogue */
 
 .epilogue {
   &__logo {
@@ -1101,7 +1184,7 @@
   }
 }
 
-/* BLOG POSTS */
+/* blog posts */
 
 .blog-posts {
   &__title {
@@ -1133,7 +1216,7 @@
   }
 }
 
-/* TWITTER FEEDS */
+/* twitter feeds */
 
 .twitter-feeds {
   &__title {
@@ -1174,7 +1257,7 @@
   }
 }
 
-/* OUR ADDRESS */
+/* our address */
 
 .our-address {
   &__title {
@@ -1208,4 +1291,13 @@
 
 .copyright {
   @include text-format($gray-5, $font-raleway-reg, 16px, 1px);
+}
+
+/* IE navgation */
+
+.ie {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }

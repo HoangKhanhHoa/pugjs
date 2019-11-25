@@ -23,7 +23,7 @@ function compilePUG() {
 }
 
 function concatJs() {
-  return gulp.src(['./js/progressbar.js',
+  return gulp.src(['./js/progressBar-jquery.js',
     './js/jquery.vEllipsis.js',
     './js/function.js',
     './js/custom.js'])

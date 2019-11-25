@@ -15,6 +15,7 @@ module.exports = {
     'ecmaVersion': 2018,
   },
   'rules': {
+    'semi': ["error", "always"],
     'quotes': ["error", "single"],
     'linebreak-style': 0,
     'no-unused-vars': 0,
