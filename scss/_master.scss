@@ -103,7 +103,6 @@
   $this: &;
   padding-top: 96px;
   position: relative;
-  min-height: 674px;
   max-width: 1920px;
   margin: auto;
   overflow: hidden;
@@ -230,7 +229,7 @@
   }
 
   &__description {
-    @include section-des;
+    @include section-desc;
     margin: 0 auto 86px;
   }
 }
@@ -438,7 +437,7 @@
   }
 
   &__description {
-    @include section-des;
+    @include section-desc;
     margin: 0 auto 80px;
   }
 
@@ -602,7 +601,7 @@
   }
 
   &__description {
-    @include section-des;
+    @include section-desc;
     margin: 0 auto 80px;
   }
 
@@ -657,7 +656,7 @@
     width: 100%;
     opacity: 0;
     transform: translateY(-100%);
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
   }
 
   &__link-social {
@@ -682,24 +681,22 @@
   &__infor {
     border: 2px solid $light-3;
     border-radius: 2px;
+    display: block;
     padding: 2px 0 8px;
+    text-decoration: none;
     transition: all .4s ease-in-out;
+
+    &:hover #{$this}__name {
+      color: $brown-1;
+    }
   }
 
   &__name {
+    @include text-format($dark, $font-raleway-reg, 24px, 1px);
+    text-transform: uppercase;
     margin-top: 16px;
     text-align: center;
-  }
-
-  &__link {
-    @include text-format($dark, $font-raleway-reg, 24px, 1px);
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: color .5s;
-
-    &:hover {
-      color: $brown-1;
-    }
+    transition: color .4s;
   }
 
   &__position {
@@ -798,7 +795,7 @@
   }
 
   &__description {
-    @include section-des;
+    @include section-desc;
     margin: 0 auto 80px;
   }
 
@@ -1054,7 +1051,9 @@
       }
     }
 
-    &:required:invalid {
+    // Fix firefox box-shadow when input required is submitted
+
+    &:required {
       box-shadow: none;
     }
   }
@@ -1291,13 +1290,4 @@
 
 .copyright {
   @include text-format($gray-5, $font-raleway-reg, 16px, 1px);
-}
-
-/* IE navgation */
-
-.ie {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
 }

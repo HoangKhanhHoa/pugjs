@@ -22,6 +22,10 @@
   .carousel-ads {
     padding-top: 85px;
 
+    &__content {
+      top: 120px;
+    }
+
     &__title {
       font-size: 40px;
     }
@@ -36,18 +40,18 @@
   .about-us {
     &__title {
       font-size: 32px;
+      padding: 0 15px;
     }
 
     &__description {
-      box-sizing: border-box;
-      padding: 0 30px;
-      width: 100%;
+      @include section-desc-mobile;
     }
   }
 
   .introduce {
     &__content {
       flex-basis: 100%;
+      padding: 40px 0;
     }
 
     &__description {
@@ -55,31 +59,44 @@
     }
   }
 
+  .our-services {
+    padding: 40px 0;
+
+    &__title {
+      padding: 0 15px;
+    }
+  }
+
   //portfolios
 
   .portfolios {
+    padding: 40px 0;
+
     &__title {
       font-size: 32px;
+      padding: 0 15px;
     }
 
     &__description {
-      box-sizing: border-box;
-      padding: 0 30px;
-      width: 100%;
+      @include section-desc-mobile;
     }
   }
 
   .project {
-    &__title {
-      font-size: 14px;
+    flex-basis: 100%;
+  }
 
-      &:after {
-        margin: 10px auto;
-      }
+  .latest-project {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 22px;
+      padding: 0 10px;
     }
 
-    &__description {
-      font-size: 12px;
+    &__description,
+    &__link {
+      font-size: 16px;
     }
   }
 
@@ -88,12 +105,15 @@
   .our-members {
     &__title {
       font-size: 32px;
+      padding: 0 15px;
     }
 
     &__description {
-      box-sizing: border-box;
-      padding: 0 30px;
-      width: 100%;
+      @include section-desc-mobile;
+    }
+
+    .container {
+      margin-bottom: 40px;
     }
 
     .row {
@@ -107,31 +127,50 @@
     margin-bottom: 50px;
   }
 
+  .client-review {
+    &__title {
+      padding: 0 15px;
+    }
+  }
+
   //our-blog
 
   .our-blog {
+    padding: 40px 0;
+
     &__title {
       font-size: 32px;
     }
 
     &__description {
-      box-sizing: border-box;
-      margin-bottom: 60px;
-      padding: 0 30px;
-      width: 100%;
+      @include section-desc-mobile;
     }
   }
 
   .post {
-    &__title {
+    &__link {
       font-size: 20px;
+    }
+
+    &__detail {
+      letter-spacing: 0;
+    }
+
+    &__control-prev,
+    &__control-next {
+      font-size: 34px;
     }
   }
 
   //contact-us
 
+  .contact-us {
+    padding: 40px 0;
+  }
+
   .form-contact {
     flex-wrap: wrap;
+    margin-top: 48px;
 
     &__group {
       flex-basis: 100%;
