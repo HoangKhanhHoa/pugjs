@@ -1434,7 +1434,7 @@ body {
   .introduce__description {
     text-align: justify; }
   .our-services {
-    padding: 40px 0; }
+    padding: 40px 0 20px; }
     .our-services__title {
       padding: 0 15px; }
   .portfolios {
@@ -1472,8 +1472,12 @@ body {
     flex-basis: 100%;
     padding: 0;
     margin-bottom: 50px; }
-  .client-review__title {
-    padding: 0 15px; }
+    .member:last-child {
+      margin-bottom: 0; }
+  .client-review {
+    padding-bottom: 40px; }
+    .client-review__title {
+      padding: 0 15px; }
   .our-blog {
     padding: 40px 0; }
     .our-blog__title {
@@ -1495,6 +1499,12 @@ body {
     flex-wrap: wrap;
     margin-top: 48px; }
     .form-contact__group {
-      flex-basis: 100%; } }
+      flex-basis: 100%; }
+  .blog-posts {
+    flex-basis: 100%;
+    padding-right: 0; }
+  .twitter-feeds {
+    flex-basis: 100%;
+    padding-left: 0; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,4 @@
+/* progress bar plugin */
 (function($) {
   var global_settings = {};
 

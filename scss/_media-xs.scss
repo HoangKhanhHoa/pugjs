@@ -60,7 +60,7 @@
   }
 
   .our-services {
-    padding: 40px 0;
+    padding: 40px 0 20px;
 
     &__title {
       padding: 0 15px;
@@ -125,6 +125,18 @@
     flex-basis: 100%;
     padding: 0;
     margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .client-review {
+    padding-bottom: 40px;
+
+    &__title {
+      padding: 0 15px;
+    }
   }
 
   .client-review {
@@ -175,5 +187,17 @@
     &__group {
       flex-basis: 100%;
     }
+  }
+
+  //footer
+
+  .blog-posts {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+
+  .twitter-feeds {
+    flex-basis: 100%;
+    padding-left: 0;
   }
 }
