@@ -615,16 +615,14 @@ body {
     padding-left: 0; }
   .member:last-child {
     padding-right: 0; }
-  .member:hover .member__social {
-    opacity: 1;
-    transform: translateY(0); }
-  .member:hover .member__infor {
-    border-color: #000; }
   .member__header {
     border-radius: 3px 3px 0 0;
     font-size: 0;
     margin-bottom: 26px;
     position: relative; }
+    .member__header:hover .member__social {
+      opacity: 1;
+      transform: translateY(0); }
   .member__social {
     display: flex;
     justify-content: center;
@@ -659,8 +657,10 @@ body {
     padding: 2px 0 8px;
     text-decoration: none;
     transition: all .4s ease-in-out; }
-    .member__infor:hover .member__name {
-      color: #7b6c63; }
+    .member__infor:hover {
+      border-color: #000; }
+      .member__infor:hover .member__name {
+        color: #7b6c63; }
   .member__name {
     color: #000;
     font-family: "Raleway Regular";
