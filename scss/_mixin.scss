@@ -21,7 +21,7 @@
   }
 }
 
-@mixin section-des {
+@mixin section-desc {
   @include text-format($dark-3, $font-raleway-reg, 18px, 1px);
   line-height: 30px;
   text-align: center;
@@ -48,4 +48,11 @@
   left: $left;
   right: $right;
   transform: translateY(-50%);
+}
+
+@mixin section-desc-mobile {
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  padding: 0 30px;
+  width: 100%;
 }

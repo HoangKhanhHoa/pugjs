@@ -108,9 +108,14 @@
       display: block;
     }
 
-    &__control-prev,
+    &__control-prev {
+      font-size: 42px;
+      left: 5%;
+    }
+
     &__control-next {
       font-size: 42px;
+      right: 5%;
     }
 
     &__content {
@@ -162,5 +167,6 @@
 
   .our-address {
     flex-basis: 100%;
+    padding-left: 0;
   }
 }

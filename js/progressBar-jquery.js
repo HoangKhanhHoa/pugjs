@@ -1,10 +1,9 @@
-/* eslint-disable camelcase */
-/* eslint-disable require-jsdoc */
-(function ($) {
+/* progress bar plugin */
+(function($) {
   var global_settings = {};
 
   var methods = {
-    init: function (options) {
+    init: function(options) {
       // This is the easiest way to have default options.
       var settings = $.extend({
         // These are the defaults.
@@ -20,15 +19,6 @@
         text: '',
       }, options);
       global_settings = settings;
-
-
-      // Create percentage
-      // var percentage = $("<div class='progress-percentage'></div>");
-
-      // if(!global_settings.percentage) {
-      //     percentage.text(global_settings.percentage);
-      // }
-      // $(this).append(percentage);
 
       // Correct any invalid values
       if (global_settings.starting_position != 100) {
@@ -57,13 +47,13 @@
       // Return allows for chaining
       return this;
     },
-    percent: function (value) {
+    percent: function(value) {
       // Change percent
       global_settings.percent = value;
       // Apply global_settings
       $(this).css({
         'height': global_settings.height,
-        'width': global_settings.width
+        'width': global_settings.width,
       });
       // Remove old canvas
       $(this).children('canvas').remove();
@@ -73,7 +63,7 @@
       // Return allows for chaining
       return this;
     },
-    animate: function (value, time) {
+    animate: function(value, time) {
       // Apply global_settings
       $(this).css({
         'height': global_settings.height,
@@ -87,7 +77,7 @@
 
       // Variable conflict, rename this
       var scope = $(this);
-      var theInterval = setInterval(function () {
+      var theInterval = setInterval(function() {
         if (global_settings.percent < value) {
           // Remove old canvas
           scope.children('canvas').remove();
@@ -102,10 +92,10 @@
 
       // Return allows for chaining
       return this;
-    }
+    },
   };
 
-  $.fn.circularProgress = function (methodOrOptions) {
+  $.fn.circularProgress = function(methodOrOptions) {
     if (methods[methodOrOptions]) {
       // Method found
       return methods[methodOrOptions].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -180,11 +170,6 @@
     var xcoord = canvas_width / 2;
     var ycoord = canvas_height / 2;
     // Height or width greater
-    // if(canvas_height >= canvas_width) {
-    //     radius = canvas_width / 2 - (global_settings.line_width);
-    // } else {
-    //     radius = canvas_height / 2 - (global_settings.line_width);
-    // }
 
     if (canvas_height >= canvas_width) {
       radius = canvas_width / 2 - global_settings.line_width - global_settings.padding;

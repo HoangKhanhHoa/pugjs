@@ -131,9 +131,8 @@ block main
                 a.member__link-social(href= val.twitter) #[i(class='fab fa-twitter')]
                 a.member__link-social(href= val.facebook) #[i(class='fab fa-facebook-f')]
                 a.member__link-social(href= val.linkedin) #[i(class='fab fa-linkedin-in')]
-            .member__infor
-              .member__name
-                a.member__link(href='#')= val.name
+            a.member__infor(href='#')
+              .member__name= val.name
               p.member__position= val.position
 
     //client-review
