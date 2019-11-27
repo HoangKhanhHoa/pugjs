@@ -627,22 +627,18 @@
     padding-right: 0;
   }
 
-  &:hover {
-    #{$this}__social {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    #{$this}__infor {
-      border-color: $dark;
-    }
-  }
-
   &__header {
     border-radius: 3px 3px 0 0;
     font-size: 0;
     margin-bottom: 26px;
     position: relative;
+
+    &:hover {
+      #{$this}__social {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   &__social {
@@ -686,8 +682,12 @@
     text-decoration: none;
     transition: all .4s ease-in-out;
 
-    &:hover #{$this}__name {
-      color: $brown-1;
+    &:hover {
+      border-color: $dark;
+
+      #{$this}__name {
+        color: $brown-1;
+      }
     }
   }
 
